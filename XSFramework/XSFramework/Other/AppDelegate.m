@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "XSCheckVersion.h"
+
+#define appId @"888174458"
+#define appQueryUrl @"https://itunes.apple.com/lookup?id=888174458"
+#define appUpdateUrl @"https://itunes.apple.com/app/id888174458"
 
 @interface AppDelegate ()
 
@@ -17,9 +22,61 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = [UIViewController new];
+    [self.window makeKeyAndVisible];
+    
+    [self checkAppUpdate];
+    
     return YES;
 }
 
+/**
+ 校验是否有更新
+ */
+- (void)checkAppUpdate {
+    
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    
+    [queue addOperationWithBlock:^{
+        //  获取查询信息
+        NSURL *queryUrl = [NSURL URLWithString:appQueryUrl];
+        NSString *queryString = [NSString stringWithContentsOfURL:queryUrl encoding:NSUTF8StringEncoding error:nil];
+        
+        if (queryString != nil) {
+            NSData *jsonData = [queryString dataUsingEncoding:NSUTF8StringEncoding];
+            NSDictionary *queryDict = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:nil];
+            NSDictionary *resultsDict = [queryDict[@"results"] lastObject];
+            NSString *releaseNotes = resultsDict[@"releaseNotes"];
+            NSString *version = resultsDict[@"version"];
+            
+            NSString *currentVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+            
+            //  判断是否有新版本
+            if (![currentVersion isEqualToString:version]) {
+                
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    
+                    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"检测到新版本" message:releaseNotes preferredStyle:UIAlertControllerStyleAlert];
+                    
+                    UIAlertAction *updateAction = [UIAlertAction actionWithTitle:@"立即更新" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                        
+                        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:appUpdateUrl]];
+                    }];
+                    [alertVC addAction:updateAction];
+                    
+                    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"暂不更新" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                        
+                    }];
+                    [alertVC addAction:cancelAction];
+                    
+                    [self.window.rootViewController presentViewController:alertVC animated:YES completion:nil];
+                }];
+            }
+        }
+    }];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
