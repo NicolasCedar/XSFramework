@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "XSCheckVersion.h"
+#import "XSNewFeatureController.h"
+#import "XSMainTabBarController.h"
 
 #define appId @"888174458"
 #define appQueryUrl @"https://itunes.apple.com/lookup?id=888174458"
@@ -24,7 +25,7 @@
     // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [UIViewController new];
+    self.window.rootViewController = [XSNewFeatureController new];
     [self.window makeKeyAndVisible];
     
     [self checkAppUpdate];

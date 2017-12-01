@@ -1,0 +1,18 @@
+//
+//  XSFramework_PrefixHeader.pch
+//  XSFramework
+//
+//  Created by huangxuesong on 2017/12/1.
+//  Copyright © 2017年 huangxuesong. All rights reserved.
+//
+
+#ifndef XSFramework_PrefixHeader_pch
+#define XSFramework_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <Masonry/Masonry.h>
+
+#endif /* XSFramework_PrefixHeader_pch */
+
