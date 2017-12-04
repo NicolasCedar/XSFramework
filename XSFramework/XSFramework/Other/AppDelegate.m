@@ -25,9 +25,6 @@
     
     [self setRootViewController];
     
-    NSLog(@"%f", kWidth(225));
-    NSLog(@"%f", kHeight(100));
-    
     return YES;
 }
 
@@ -59,6 +56,9 @@
 
 #pragma mark - private
 
+/**
+ 设置主控制器
+ */
 - (void)setRootViewController{
     
     // 1.获取当前版本号
@@ -92,7 +92,7 @@
 
 
 /**
- 校验是否有更新
+ 校验是否有版本更新
  */
 - (void)checkAppUpdate {
     
