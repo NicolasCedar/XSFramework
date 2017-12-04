@@ -17,6 +17,10 @@
 		8CDB5CA71FD153BA00187FAD /* XSNewFeatureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CDB5CA61FD153BA00187FAD /* XSNewFeatureController.m */; };
 		8CDB5CAA1FD153F100187FAD /* XSNewFeatureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CDB5CA91FD153F100187FAD /* XSNewFeatureLayout.m */; };
 		8CDB5CB01FD158CD00187FAD /* XSNewFeatureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CDB5CAF1FD158CD00187FAD /* XSNewFeatureCell.m */; };
+		8CEE3AE21FD4DBF30016B712 /* XSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE3AE11FD4DBF30016B712 /* XSHomeViewController.m */; };
+		8CEE3AE51FD4DBFA0016B712 /* XSMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE3AE41FD4DBFA0016B712 /* XSMineViewController.m */; };
+		8CEE3AE71FD4DCEA0016B712 /* main.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CEE3AE61FD4DCEA0016B712 /* main.json */; };
+		8CEE3AEA1FD4E1480016B712 /* XSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE3AE91FD4E1480016B712 /* XSNavigationController.m */; };
 		C0E1B87D60F59BA0869439D3 /* Pods_XSFrameworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E19989262750250095BAFDCC /* Pods_XSFrameworkTests.framework */; };
 		C2C836EC304C3C6437BD4B07 /* Pods_XSFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9976A2E7B65E09387B88453B /* Pods_XSFramework.framework */; };
 		FAF4D81E5C0D089CD88D03D1 /* Pods_XSFrameworkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FE5A460EF7184CAAF8CB5A0 /* Pods_XSFrameworkUITests.framework */; };
@@ -65,6 +69,13 @@
 		8CDB5CAE1FD158CD00187FAD /* XSNewFeatureCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSNewFeatureCell.h; sourceTree = "<group>"; };
 		8CDB5CAF1FD158CD00187FAD /* XSNewFeatureCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSNewFeatureCell.m; sourceTree = "<group>"; };
 		8CDB5CB11FD15A2300187FAD /* XSFramework_PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSFramework_PrefixHeader.pch; sourceTree = "<group>"; };
+		8CEE3AE01FD4DBF30016B712 /* XSHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSHomeViewController.h; sourceTree = "<group>"; };
+		8CEE3AE11FD4DBF30016B712 /* XSHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSHomeViewController.m; sourceTree = "<group>"; };
+		8CEE3AE31FD4DBFA0016B712 /* XSMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSMineViewController.h; sourceTree = "<group>"; };
+		8CEE3AE41FD4DBFA0016B712 /* XSMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSMineViewController.m; sourceTree = "<group>"; };
+		8CEE3AE61FD4DCEA0016B712 /* main.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = main.json; sourceTree = "<group>"; };
+		8CEE3AE81FD4E1480016B712 /* XSNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSNavigationController.h; sourceTree = "<group>"; };
+		8CEE3AE91FD4E1480016B712 /* XSNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSNavigationController.m; sourceTree = "<group>"; };
 		9976A2E7B65E09387B88453B /* Pods_XSFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XSFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7BA0B36539C3464402EE546 /* Pods-XSFrameworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XSFrameworkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XSFrameworkTests/Pods-XSFrameworkTests.release.xcconfig"; sourceTree = "<group>"; };
 		E19989262750250095BAFDCC /* Pods_XSFrameworkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XSFrameworkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				8CDB5C9C1FD145E700187FAD /* MainModule */,
+				8CEE3ADE1FD4DBE40016B712 /* HomeModule */,
+				8CEE3ADF1FD4DBE40016B712 /* MineModule */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -186,6 +199,9 @@
 				8CDB5CA41FD153A400187FAD /* NewFeature */,
 				8CDB5C9E1FD1461F00187FAD /* XSMainTabBarController.h */,
 				8CDB5C9F1FD1461F00187FAD /* XSMainTabBarController.m */,
+				8CEE3AE81FD4E1480016B712 /* XSNavigationController.h */,
+				8CEE3AE91FD4E1480016B712 /* XSNavigationController.m */,
+				8CEE3AE61FD4DCEA0016B712 /* main.json */,
 			);
 			path = MainModule;
 			sourceTree = "<group>";
@@ -201,6 +217,24 @@
 				8CDB5CAF1FD158CD00187FAD /* XSNewFeatureCell.m */,
 			);
 			path = NewFeature;
+			sourceTree = "<group>";
+		};
+		8CEE3ADE1FD4DBE40016B712 /* HomeModule */ = {
+			isa = PBXGroup;
+			children = (
+				8CEE3AE01FD4DBF30016B712 /* XSHomeViewController.h */,
+				8CEE3AE11FD4DBF30016B712 /* XSHomeViewController.m */,
+			);
+			path = HomeModule;
+			sourceTree = "<group>";
+		};
+		8CEE3ADF1FD4DBE40016B712 /* MineModule */ = {
+			isa = PBXGroup;
+			children = (
+				8CEE3AE31FD4DBFA0016B712 /* XSMineViewController.h */,
+				8CEE3AE41FD4DBFA0016B712 /* XSMineViewController.m */,
+			);
+			path = MineModule;
 			sourceTree = "<group>";
 		};
 		D98513BDBF7F0AA01B8BC666 /* Pods */ = {
@@ -342,6 +376,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CEE3AE71FD4DCEA0016B712 /* main.json in Resources */,
 				8CDB5C721FD145AD00187FAD /* LaunchScreen.storyboard in Resources */,
 				8CDB5C6F1FD145AD00187FAD /* Assets.xcassets in Resources */,
 			);
@@ -523,9 +558,12 @@
 				8CDB5CA71FD153BA00187FAD /* XSNewFeatureController.m in Sources */,
 				8CDB5C751FD145AD00187FAD /* main.m in Sources */,
 				8CDB5CB01FD158CD00187FAD /* XSNewFeatureCell.m in Sources */,
+				8CEE3AE21FD4DBF30016B712 /* XSHomeViewController.m in Sources */,
+				8CEE3AE51FD4DBFA0016B712 /* XSMineViewController.m in Sources */,
 				8CDB5CA01FD1461F00187FAD /* XSMainTabBarController.m in Sources */,
 				8CDB5C9D1FD145E700187FAD /* AppDelegate.m in Sources */,
 				8CDB5CAA1FD153F100187FAD /* XSNewFeatureLayout.m in Sources */,
+				8CEE3AEA1FD4E1480016B712 /* XSNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

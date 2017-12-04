@@ -12,7 +12,28 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
+#ifdef __OBJC__
+
+#ifdef DEBUG
+#define NSLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#define NSLog(...)
+#endif
+
+#endif
+
 #import <Masonry/Masonry.h>
+
+/* 屏幕宽高 */
+#define kScreen_Width [UIScreen mainScreen].bounds.size.width
+#define kScreen_Height [UIScreen mainScreen].bounds.size.height
+
+/* 屏幕宽高比例*/
+#define kWidth_Proportion  kScreen_Width / 375
+#define kHeight_Proportion kScreen_Height / 667
+
+#define kWidth(number) number * kWidth_Proportion
+#define kHeight(number) number * kHeight_Proportion
 
 #endif /* XSFramework_PrefixHeader_pch */
 
