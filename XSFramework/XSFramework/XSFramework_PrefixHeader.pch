@@ -13,13 +13,23 @@
 
 #ifdef DEBUG
 #define NSLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#elif TESTDEBUG
+#define NSLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 #else
 #define NSLog(...)
 #endif
 
 #endif
 
+/* ================================================================= */
+
 #import <Masonry/Masonry.h>
+#import <YYModel/YYModel.h>
+#import <XSAdditions/XSAdditions.h>
+
+#import "XSNetworkingManager.h"
+
+/* ================================================================= */
 
 /* 屏幕宽高 */
 #define kScreen_Width [UIScreen mainScreen].bounds.size.width
@@ -32,13 +42,15 @@
 #define kWidth(number) number * kWidth_Proportion
 #define kHeight(number) number * kHeight_Proportion
 
+/* ================================================================= */
+
 /* 环境 */
 #ifdef DEBUG
-#define baseURL @"https://www.gogle.com"
+#define baseURLString @"https://www.google.com"
 #elif TESTDEBUG
-#define baseURL @"https://www.baidu.com"
+#define baseURLString @"https://www.baidu.com"
 #else
-#define baseURL @"https://www.sougou.com"
+#define baseURLString @"https://www.sougou.com"
 #endif
 
 #endif /* XSFramework_PrefixHeader_pch */

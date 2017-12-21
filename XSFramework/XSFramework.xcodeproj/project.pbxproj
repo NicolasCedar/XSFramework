@@ -11,6 +11,7 @@
 		8CB4C12F1FEB9A1B00D71F6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CB4C1291FEB9A1B00D71F6B /* Assets.xcassets */; };
 		8CB4C1301FEB9A1B00D71F6B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CB4C12C1FEB9A1B00D71F6B /* Info.plist */; };
 		8CB4C1331FEB9A8800D71F6B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB4C1321FEB9A8800D71F6B /* AppDelegate.m */; };
+		8CB4C1371FEBAC8100D71F6B /* XSNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB4C1361FEBAC8100D71F6B /* XSNetworkingManager.m */; };
 		8CDB5C721FD145AD00187FAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CDB5C701FD145AD00187FAD /* LaunchScreen.storyboard */; };
 		8CDB5C7F1FD145AD00187FAD /* XSFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CDB5C7E1FD145AD00187FAD /* XSFrameworkTests.m */; };
 		8CDB5C8A1FD145AD00187FAD /* XSFrameworkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CDB5C891FD145AD00187FAD /* XSFrameworkUITests.m */; };
@@ -54,6 +55,8 @@
 		8CB4C12C1FEB9A1B00D71F6B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = XSFramework/Info.plist; sourceTree = SOURCE_ROOT; };
 		8CB4C1311FEB9A8800D71F6B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = XSFramework/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		8CB4C1321FEB9A8800D71F6B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = XSFramework/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		8CB4C1351FEBAC8100D71F6B /* XSNetworkingManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSNetworkingManager.h; sourceTree = "<group>"; };
+		8CB4C1361FEBAC8100D71F6B /* XSNetworkingManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSNetworkingManager.m; sourceTree = "<group>"; };
 		8CDB5C621FD145AD00187FAD /* XSFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XSFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CDB5C711FD145AD00187FAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CDB5C7A1FD145AD00187FAD /* XSFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XSFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +119,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8CB4C1341FEBAC5F00D71F6B /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				8CB4C1351FEBAC8100D71F6B /* XSNetworkingManager.h */,
+				8CB4C1361FEBAC8100D71F6B /* XSNetworkingManager.m */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
 		8CDB5C591FD145AD00187FAD = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +153,7 @@
 		8CDB5C641FD145AD00187FAD /* XSFramework */ = {
 			isa = PBXGroup;
 			children = (
+				8CB4C1341FEBAC5F00D71F6B /* Libs */,
 				8CDB5C9B1FD145E700187FAD /* Classes */,
 				8CB4C1311FEB9A8800D71F6B /* AppDelegate.h */,
 				8CB4C1321FEB9A8800D71F6B /* AppDelegate.m */,
@@ -418,11 +431,15 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-XSFramework/Pods-XSFramework-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/XSAdditions/XSAdditions.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XSAdditions.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -553,6 +570,7 @@
 				8CEE3AE21FD4DBF30016B712 /* XSHomeViewController.m in Sources */,
 				8CEE3AE51FD4DBFA0016B712 /* XSMineViewController.m in Sources */,
 				8CDB5CA01FD1461F00187FAD /* XSMainTabBarController.m in Sources */,
+				8CB4C1371FEBAC8100D71F6B /* XSNetworkingManager.m in Sources */,
 				8CDB5CAA1FD153F100187FAD /* XSNewFeatureLayout.m in Sources */,
 				8CB4C12E1FEB9A1B00D71F6B /* main.m in Sources */,
 				8CEE3AEA1FD4E1480016B712 /* XSNavigationController.m in Sources */,

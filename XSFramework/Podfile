@@ -8,6 +8,8 @@ target 'XSFramework' do
   # Pods for XSFramework
 pod 'AFNetworking'
 pod 'Masonry'
+pod 'YYModel'
+pod 'XSAdditions'
 
   target 'XSFrameworkTests' do
     inherit! :search_paths
