@@ -9,9 +9,6 @@
 #ifndef XSFramework_PrefixHeader_pch
 #define XSFramework_PrefixHeader_pch
 
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
-
 #ifdef __OBJC__
 
 #ifdef DEBUG
@@ -34,6 +31,15 @@
 
 #define kWidth(number) number * kWidth_Proportion
 #define kHeight(number) number * kHeight_Proportion
+
+/* 环境 */
+#ifdef DEBUG
+#define baseURL @"https://www.gogle.com"
+#elif TESTDEBUG
+#define baseURL @"https://www.baidu.com"
+#else
+#define baseURL @"https://www.sougou.com"
+#endif
 
 #endif /* XSFramework_PrefixHeader_pch */
 

@@ -77,10 +77,13 @@
 		8CEE3AE81FD4E1480016B712 /* XSNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSNavigationController.h; sourceTree = "<group>"; };
 		8CEE3AE91FD4E1480016B712 /* XSNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSNavigationController.m; sourceTree = "<group>"; };
 		9976A2E7B65E09387B88453B /* Pods_XSFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XSFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB2E58A895FEF6DCBEE95163 /* Pods-XSFrameworkUITests.testdebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XSFrameworkUITests.testdebug.xcconfig"; path = "Pods/Target Support Files/Pods-XSFrameworkUITests/Pods-XSFrameworkUITests.testdebug.xcconfig"; sourceTree = "<group>"; };
 		D7BA0B36539C3464402EE546 /* Pods-XSFrameworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XSFrameworkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XSFrameworkTests/Pods-XSFrameworkTests.release.xcconfig"; sourceTree = "<group>"; };
 		E19989262750250095BAFDCC /* Pods_XSFrameworkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XSFrameworkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1ADD35CA61730F9AE7789BD /* Pods-XSFrameworkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XSFrameworkUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XSFrameworkUITests/Pods-XSFrameworkUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E9007BD01940B485BD4E7E1F /* Pods-XSFramework.testdebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XSFramework.testdebug.xcconfig"; path = "Pods/Target Support Files/Pods-XSFramework/Pods-XSFramework.testdebug.xcconfig"; sourceTree = "<group>"; };
 		F0FF9EAC538AD7CF2D5CF00B /* Pods-XSFrameworkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XSFrameworkUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XSFrameworkUITests/Pods-XSFrameworkUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F19286BA8D769874CC17242E /* Pods-XSFrameworkTests.testdebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XSFrameworkTests.testdebug.xcconfig"; path = "Pods/Target Support Files/Pods-XSFrameworkTests/Pods-XSFrameworkTests.testdebug.xcconfig"; sourceTree = "<group>"; };
 		FDBE068B6B9B272FA43C82FF /* Pods-XSFrameworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XSFrameworkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XSFrameworkTests/Pods-XSFrameworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -246,6 +249,9 @@
 				D7BA0B36539C3464402EE546 /* Pods-XSFrameworkTests.release.xcconfig */,
 				E1ADD35CA61730F9AE7789BD /* Pods-XSFrameworkUITests.debug.xcconfig */,
 				F0FF9EAC538AD7CF2D5CF00B /* Pods-XSFrameworkUITests.release.xcconfig */,
+				E9007BD01940B485BD4E7E1F /* Pods-XSFramework.testdebug.xcconfig */,
+				F19286BA8D769874CC17242E /* Pods-XSFrameworkTests.testdebug.xcconfig */,
+				BB2E58A895FEF6DCBEE95163 /* Pods-XSFrameworkUITests.testdebug.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -610,6 +616,108 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8C2822B31FEB85690033DF89 /* TestDebug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CustomAppBundleld = com.product.testDebug;
+				CustomAppName = TestDebug;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"TESTDEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = TestDebug;
+		};
+		8C2822B41FEB85690033DF89 /* TestDebug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9007BD01940B485BD4E7E1F /* Pods-XSFramework.testdebug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = XSFramework/Other/XSFramework_PrefixHeader.pch;
+				INFOPLIST_FILE = XSFramework/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CustomAppBundleld;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = TestDebug;
+		};
+		8C2822B51FEB85690033DF89 /* TestDebug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F19286BA8D769874CC17242E /* Pods-XSFrameworkTests.testdebug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = XSFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huangxuesong.XSFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XSFramework.app/XSFramework";
+			};
+			name = TestDebug;
+		};
+		8C2822B61FEB85690033DF89 /* TestDebug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB2E58A895FEF6DCBEE95163 /* Pods-XSFrameworkUITests.testdebug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = XSFrameworkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huangxuesong.XSFrameworkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = XSFramework;
+			};
+			name = TestDebug;
+		};
 		8CDB5C8C1FD145AD00187FAD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -641,6 +749,8 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CustomAppBundleld = com.product.debug;
+				CustomAppName = Debug;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -696,6 +806,8 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CustomAppBundleld = com.product.release;
+				CustomAppName = Release;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -724,7 +836,7 @@
 				INFOPLIST_FILE = XSFramework/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.huangxuesong.XSFramework;
+				PRODUCT_BUNDLE_IDENTIFIER = CustomAppBundleld;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -740,7 +852,7 @@
 				INFOPLIST_FILE = XSFramework/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.huangxuesong.XSFramework;
+				PRODUCT_BUNDLE_IDENTIFIER = CustomAppBundleld;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -811,6 +923,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8CDB5C8C1FD145AD00187FAD /* Debug */,
+				8C2822B31FEB85690033DF89 /* TestDebug */,
 				8CDB5C8D1FD145AD00187FAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -820,6 +933,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8CDB5C8F1FD145AD00187FAD /* Debug */,
+				8C2822B41FEB85690033DF89 /* TestDebug */,
 				8CDB5C901FD145AD00187FAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -829,6 +943,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8CDB5C921FD145AD00187FAD /* Debug */,
+				8C2822B51FEB85690033DF89 /* TestDebug */,
 				8CDB5C931FD145AD00187FAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -838,6 +953,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8CDB5C951FD145AD00187FAD /* Debug */,
+				8C2822B61FEB85690033DF89 /* TestDebug */,
 				8CDB5C961FD145AD00187FAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
