@@ -90,11 +90,7 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark - private
 
 - (void)exitButtonClick {
-    [UIView animateWithDuration:0.25f animations:^{
-        self.view.alpha = 0;
-    } completion:^(BOOL finished) {
-        [UIApplication sharedApplication].keyWindow.rootViewController = [[XSMainTabBarController alloc] init];
-    }];
+    [UIApplication sharedApplication].keyWindow.rootViewController = [[XSMainTabBarController alloc] init];
 }
 
 #pragma mark - UIScrollViewDelegate

@@ -30,4 +30,17 @@
     self.navigationBar.translucent = NO;
 }
 
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    
+    if (self.viewControllers.count > 0) {// 隐藏标签栏
+        viewController.hidesBottomBarWhenPushed = YES;
+        
+        //  取消返回按钮文字
+        UIViewController *sourceVc = self.viewControllers[self.viewControllers.count - 1];
+        sourceVc.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:sourceVc action:nil];
+    }
+    
+    [super pushViewController:viewController animated:animated];
+}
+
 @end
