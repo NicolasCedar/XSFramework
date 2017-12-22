@@ -7,7 +7,7 @@
 //
 
 #import "XSHomeViewController.h"
-#import "XSUserManager.h"
+#import "XSWebViewController.h"
 
 @interface XSHomeViewController ()
 
@@ -21,6 +21,13 @@
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    XSWebViewController *vc = [[XSWebViewController alloc] init];
+    
+    vc.urlString = @"https://www. baidu .com ";
+    
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 @end
