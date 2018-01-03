@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C4F80501FFCD1F000658E26 /* XSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4F804F1FFCD1F000658E26 /* XSViewController.m */; };
+		8C4F80531FFCD2A600658E26 /* XSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4F80521FFCD2A600658E26 /* XSNavigationController.m */; };
 		8CB4C12E1FEB9A1B00D71F6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB4C1281FEB9A1B00D71F6B /* main.m */; };
 		8CB4C12F1FEB9A1B00D71F6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CB4C1291FEB9A1B00D71F6B /* Assets.xcassets */; };
 		8CB4C1301FEB9A1B00D71F6B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CB4C12C1FEB9A1B00D71F6B /* Info.plist */; };
@@ -23,7 +25,6 @@
 		8CEE3AE21FD4DBF30016B712 /* XSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE3AE11FD4DBF30016B712 /* XSHomeViewController.m */; };
 		8CEE3AE51FD4DBFA0016B712 /* XSMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE3AE41FD4DBFA0016B712 /* XSMineViewController.m */; };
 		8CEE3AE71FD4DCEA0016B712 /* main.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CEE3AE61FD4DCEA0016B712 /* main.json */; };
-		8CEE3AEA1FD4E1480016B712 /* XSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE3AE91FD4E1480016B712 /* XSNavigationController.m */; };
 		C0E1B87D60F59BA0869439D3 /* Pods_XSFrameworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E19989262750250095BAFDCC /* Pods_XSFrameworkTests.framework */; };
 		C2C836EC304C3C6437BD4B07 /* Pods_XSFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9976A2E7B65E09387B88453B /* Pods_XSFramework.framework */; };
 		FAF4D81E5C0D089CD88D03D1 /* Pods_XSFrameworkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FE5A460EF7184CAAF8CB5A0 /* Pods_XSFrameworkUITests.framework */; };
@@ -50,6 +51,10 @@
 		0E0D1FEC4DB9619C3F8DCF28 /* Pods-XSFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XSFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-XSFramework/Pods-XSFramework.release.xcconfig"; sourceTree = "<group>"; };
 		2F189B082FF9FED5A73D4E4B /* Pods-XSFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XSFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XSFramework/Pods-XSFramework.debug.xcconfig"; sourceTree = "<group>"; };
 		4FE5A460EF7184CAAF8CB5A0 /* Pods_XSFrameworkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XSFrameworkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C4F804E1FFCD1F000658E26 /* XSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSViewController.h; sourceTree = "<group>"; };
+		8C4F804F1FFCD1F000658E26 /* XSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSViewController.m; sourceTree = "<group>"; };
+		8C4F80511FFCD2A600658E26 /* XSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSNavigationController.h; sourceTree = "<group>"; };
+		8C4F80521FFCD2A600658E26 /* XSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSNavigationController.m; sourceTree = "<group>"; };
 		8CB4C1281FEB9A1B00D71F6B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = XSFramework/main.m; sourceTree = SOURCE_ROOT; };
 		8CB4C1291FEB9A1B00D71F6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = XSFramework/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		8CB4C12B1FEB9A1B00D71F6B /* XSFramework_PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XSFramework_PrefixHeader.pch; path = XSFramework/XSFramework_PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
@@ -81,8 +86,6 @@
 		8CEE3AE31FD4DBFA0016B712 /* XSMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSMineViewController.h; sourceTree = "<group>"; };
 		8CEE3AE41FD4DBFA0016B712 /* XSMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSMineViewController.m; sourceTree = "<group>"; };
 		8CEE3AE61FD4DCEA0016B712 /* main.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = main.json; sourceTree = "<group>"; };
-		8CEE3AE81FD4E1480016B712 /* XSNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSNavigationController.h; sourceTree = "<group>"; };
-		8CEE3AE91FD4E1480016B712 /* XSNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSNavigationController.m; sourceTree = "<group>"; };
 		9976A2E7B65E09387B88453B /* Pods_XSFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XSFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB2E58A895FEF6DCBEE95163 /* Pods-XSFrameworkUITests.testdebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XSFrameworkUITests.testdebug.xcconfig"; path = "Pods/Target Support Files/Pods-XSFrameworkUITests/Pods-XSFrameworkUITests.testdebug.xcconfig"; sourceTree = "<group>"; };
 		D7BA0B36539C3464402EE546 /* Pods-XSFrameworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XSFrameworkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XSFrameworkTests/Pods-XSFrameworkTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +125,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C4F804D1FFCD1E400658E26 /* BaseModule */ = {
+			isa = PBXGroup;
+			children = (
+				8C4F80511FFCD2A600658E26 /* XSNavigationController.h */,
+				8C4F80521FFCD2A600658E26 /* XSNavigationController.m */,
+				8C4F804E1FFCD1F000658E26 /* XSViewController.h */,
+				8C4F804F1FFCD1F000658E26 /* XSViewController.m */,
+			);
+			path = BaseModule;
+			sourceTree = "<group>";
+		};
 		8CB4C1341FEBAC5F00D71F6B /* Libs */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +206,7 @@
 		8CDB5C9B1FD145E700187FAD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8C4F804D1FFCD1E400658E26 /* BaseModule */,
 				8CDB5C9C1FD145E700187FAD /* MainModule */,
 				8CEE3ADE1FD4DBE40016B712 /* HomeModule */,
 				8CEE3ADF1FD4DBE40016B712 /* MineModule */,
@@ -205,8 +220,6 @@
 				8CDB5CA41FD153A400187FAD /* NewFeature */,
 				8CDB5C9E1FD1461F00187FAD /* XSMainTabBarController.h */,
 				8CDB5C9F1FD1461F00187FAD /* XSMainTabBarController.m */,
-				8CEE3AE81FD4E1480016B712 /* XSNavigationController.h */,
-				8CEE3AE91FD4E1480016B712 /* XSNavigationController.m */,
 				8CEE3AE61FD4DCEA0016B712 /* main.json */,
 			);
 			path = MainModule;
@@ -571,15 +584,16 @@
 			files = (
 				8CB4C13D1FEC996A00D71F6B /* XSWebViewController.m in Sources */,
 				8CDB5CA71FD153BA00187FAD /* XSNewFeatureController.m in Sources */,
+				8C4F80531FFCD2A600658E26 /* XSNavigationController.m in Sources */,
 				8CDB5CB01FD158CD00187FAD /* XSNewFeatureCell.m in Sources */,
 				8CB4C1331FEB9A8800D71F6B /* AppDelegate.m in Sources */,
 				8CEE3AE21FD4DBF30016B712 /* XSHomeViewController.m in Sources */,
 				8CEE3AE51FD4DBFA0016B712 /* XSMineViewController.m in Sources */,
 				8CDB5CA01FD1461F00187FAD /* XSMainTabBarController.m in Sources */,
+				8C4F80501FFCD1F000658E26 /* XSViewController.m in Sources */,
 				8CB4C1371FEBAC8100D71F6B /* XSNetworkingManager.m in Sources */,
 				8CDB5CAA1FD153F100187FAD /* XSNewFeatureLayout.m in Sources */,
 				8CB4C12E1FEB9A1B00D71F6B /* main.m in Sources */,
-				8CEE3AEA1FD4E1480016B712 /* XSNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

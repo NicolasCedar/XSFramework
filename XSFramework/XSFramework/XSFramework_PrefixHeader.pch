@@ -42,6 +42,9 @@
 #define kWidth(number) number * kWidth_Proportion
 #define kHeight(number) number * kHeight_Proportion
 
+/// 状态栏高度
+#define kStatusBar_Height  [UIApplication sharedApplication].statusBarFrame.size.height
+
 /* ================================================================= */
 
 /* 环境 */

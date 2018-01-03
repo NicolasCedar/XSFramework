@@ -6,8 +6,8 @@
 //  Copyright © 2017年 huangxuesong. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "XSViewController.h"
 
-@interface XSHomeViewController : UIViewController
+@interface XSHomeViewController : XSViewController
 
 @end

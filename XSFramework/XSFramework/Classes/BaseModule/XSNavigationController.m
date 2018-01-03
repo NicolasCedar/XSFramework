@@ -17,18 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setupNavBar];
+    self.navigationBar.hidden = YES;
 }
 
-#pragma mark - private
-
-- (void)setupNavBar {
-    
-    //  去除底部黑线
-    [self.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-    self.navigationBar.shadowImage = [UIImage new];
-    self.navigationBar.translucent = NO;
-}
+#pragma mark - rewrite
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     
