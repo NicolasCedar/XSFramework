@@ -6,11 +6,14 @@
 //  Copyright © 2017年 huangxuesong. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "XSViewController.h"
 
-@interface XSWebViewController : UIViewController
+@interface XSWebViewController : XSViewController
 
 /// 请求地址
 @property (nonatomic, copy) NSString *urlString;
+
+/// 加载本地文件
+@property (nonatomic, copy) NSString *fileName;
 
 @end

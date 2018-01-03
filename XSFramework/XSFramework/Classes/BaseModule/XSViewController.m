@@ -54,24 +54,23 @@
     //  navBar
     self.navBar = [[UINavigationBar alloc] init];
     self.navBar.translucent = NO;
+    [self.navBar setTintColor:[UIColor darkGrayColor]];
     
     //  navItem
     self.navItem = [[UINavigationItem alloc] initWithTitle:self.title];
     self.navBar.items = @[self.navItem];
     
-    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"nav_back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]style:UIBarButtonItemStylePlain target:self action:@selector(popToPresent)];
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_back"] style:UIBarButtonItemStylePlain target:self action:@selector(popToPresent)];
     
     UIBarButtonItem *closeItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStylePlain target:self action:@selector(dismissToPresent)];
     
     if (self.presentingViewController != nil) {
         if (self.navigationController.childViewControllers.count > 1) {
             self.navItem.leftBarButtonItems = @[backItem, closeItem];
-        }
-        else {
+        } else {
             self.navItem.leftBarButtonItem = closeItem;
         }
-    }
-    else {
+    } else {
         if (self.navigationController.childViewControllers.count > 1) {
             self.navItem.leftBarButtonItem = backItem;
         }

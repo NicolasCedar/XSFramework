@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		8C4F80501FFCD1F000658E26 /* XSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4F804F1FFCD1F000658E26 /* XSViewController.m */; };
 		8C4F80531FFCD2A600658E26 /* XSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4F80521FFCD2A600658E26 /* XSNavigationController.m */; };
+		8C4F805B1FFCDA9E00658E26 /* XSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4F80591FFCDA9E00658E26 /* XSWebViewController.m */; };
 		8CB4C12E1FEB9A1B00D71F6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB4C1281FEB9A1B00D71F6B /* main.m */; };
 		8CB4C12F1FEB9A1B00D71F6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CB4C1291FEB9A1B00D71F6B /* Assets.xcassets */; };
 		8CB4C1301FEB9A1B00D71F6B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CB4C12C1FEB9A1B00D71F6B /* Info.plist */; };
 		8CB4C1331FEB9A8800D71F6B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB4C1321FEB9A8800D71F6B /* AppDelegate.m */; };
 		8CB4C1371FEBAC8100D71F6B /* XSNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB4C1361FEBAC8100D71F6B /* XSNetworkingManager.m */; };
-		8CB4C13D1FEC996A00D71F6B /* XSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB4C13C1FEC996A00D71F6B /* XSWebViewController.m */; };
 		8CDB5C721FD145AD00187FAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CDB5C701FD145AD00187FAD /* LaunchScreen.storyboard */; };
 		8CDB5C7F1FD145AD00187FAD /* XSFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CDB5C7E1FD145AD00187FAD /* XSFrameworkTests.m */; };
 		8CDB5C8A1FD145AD00187FAD /* XSFrameworkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CDB5C891FD145AD00187FAD /* XSFrameworkUITests.m */; };
@@ -55,6 +55,8 @@
 		8C4F804F1FFCD1F000658E26 /* XSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSViewController.m; sourceTree = "<group>"; };
 		8C4F80511FFCD2A600658E26 /* XSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSNavigationController.h; sourceTree = "<group>"; };
 		8C4F80521FFCD2A600658E26 /* XSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSNavigationController.m; sourceTree = "<group>"; };
+		8C4F80591FFCDA9E00658E26 /* XSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSWebViewController.m; sourceTree = "<group>"; };
+		8C4F805A1FFCDA9E00658E26 /* XSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSWebViewController.h; sourceTree = "<group>"; };
 		8CB4C1281FEB9A1B00D71F6B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = XSFramework/main.m; sourceTree = SOURCE_ROOT; };
 		8CB4C1291FEB9A1B00D71F6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = XSFramework/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		8CB4C12B1FEB9A1B00D71F6B /* XSFramework_PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XSFramework_PrefixHeader.pch; path = XSFramework/XSFramework_PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
@@ -63,8 +65,6 @@
 		8CB4C1321FEB9A8800D71F6B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = XSFramework/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		8CB4C1351FEBAC8100D71F6B /* XSNetworkingManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSNetworkingManager.h; sourceTree = "<group>"; };
 		8CB4C1361FEBAC8100D71F6B /* XSNetworkingManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSNetworkingManager.m; sourceTree = "<group>"; };
-		8CB4C13B1FEC996A00D71F6B /* XSWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSWebViewController.h; sourceTree = "<group>"; };
-		8CB4C13C1FEC996A00D71F6B /* XSWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSWebViewController.m; sourceTree = "<group>"; };
 		8CDB5C621FD145AD00187FAD /* XSFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XSFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CDB5C711FD145AD00187FAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CDB5C7A1FD145AD00187FAD /* XSFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XSFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +128,8 @@
 		8C4F804D1FFCD1E400658E26 /* BaseModule */ = {
 			isa = PBXGroup;
 			children = (
+				8C4F805A1FFCDA9E00658E26 /* XSWebViewController.h */,
+				8C4F80591FFCDA9E00658E26 /* XSWebViewController.m */,
 				8C4F80511FFCD2A600658E26 /* XSNavigationController.h */,
 				8C4F80521FFCD2A600658E26 /* XSNavigationController.m */,
 				8C4F804E1FFCD1F000658E26 /* XSViewController.h */,
@@ -141,8 +143,6 @@
 			children = (
 				8CB4C1351FEBAC8100D71F6B /* XSNetworkingManager.h */,
 				8CB4C1361FEBAC8100D71F6B /* XSNetworkingManager.m */,
-				8CB4C13B1FEC996A00D71F6B /* XSWebViewController.h */,
-				8CB4C13C1FEC996A00D71F6B /* XSWebViewController.m */,
 			);
 			path = Libs;
 			sourceTree = "<group>";
@@ -582,7 +582,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CB4C13D1FEC996A00D71F6B /* XSWebViewController.m in Sources */,
 				8CDB5CA71FD153BA00187FAD /* XSNewFeatureController.m in Sources */,
 				8C4F80531FFCD2A600658E26 /* XSNavigationController.m in Sources */,
 				8CDB5CB01FD158CD00187FAD /* XSNewFeatureCell.m in Sources */,
@@ -590,6 +589,7 @@
 				8CEE3AE21FD4DBF30016B712 /* XSHomeViewController.m in Sources */,
 				8CEE3AE51FD4DBFA0016B712 /* XSMineViewController.m in Sources */,
 				8CDB5CA01FD1461F00187FAD /* XSMainTabBarController.m in Sources */,
+				8C4F805B1FFCDA9E00658E26 /* XSWebViewController.m in Sources */,
 				8C4F80501FFCD1F000658E26 /* XSViewController.m in Sources */,
 				8CB4C1371FEBAC8100D71F6B /* XSNetworkingManager.m in Sources */,
 				8CDB5CAA1FD153F100187FAD /* XSNewFeatureLayout.m in Sources */,
