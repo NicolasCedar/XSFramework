@@ -17,6 +17,11 @@
 /// 加载进度条
 @property (nonatomic, strong) UIProgressView *progressView;
 
+/**
+ 刷新控件
+ */
+@property (nonatomic, strong) UIBarButtonItem *refreshItem;
+
 @end
 
 @implementation XSWebViewController
@@ -63,6 +68,16 @@
     } else {
         [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.urlString]]];
     }
+}
+
+#pragma mark - lazy
+
+- (UIBarButtonItem *)refreshItem {
+    if (_refreshItem == nil) {
+        _refreshItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshView)];
+    }
+    
+    return _refreshItem;
 }
 
 #pragma mark - set
@@ -122,17 +137,25 @@
     }
 }
 
+- (void)refreshView {
+    [self.webView reload];
+}
+
 #pragma mark - WKNavigationDelegate, WKUIDelegate
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
-    NSLog(@"%@", navigationAction.request.mainDocumentURL);
+//    NSLog(@"%@", navigationAction.request.mainDocumentURL);
     decisionHandler(WKNavigationActionPolicyAllow);
 }
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
-    [webView evaluateJavaScript:@"document.title"
-              completionHandler:^(id _Nullable title, NSError * _Nullable error) {
-                  self.title = title;
-              }];
+    [webView evaluateJavaScript:@"document.title" completionHandler:^(NSString *title, NSError * _Nullable error) {
+        self.title = title;
+    }];
+}
+
+- (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error {
+    NSLog(@"%@", error);
+    self.navItem.rightBarButtonItem = self.refreshItem;
 }
 
 @end
