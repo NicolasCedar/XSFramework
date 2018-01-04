@@ -16,23 +16,44 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self openUpRefresh];
+    [self openDownRefresh];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)loadNewData {
+    [self.dataSource removeAllObjects];
+    
+    for (int i = 0; i < 10; i++) {
+        [self.dataSource addObject:@"new"];
+    }
+    [self.tableView reloadData];
+    [super loadNewData];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)loadMoreData {
+    
+    for (int i = 0; i < 10; i++) {
+        [self.dataSource addObject:@"more"];
+    }
+    [self.tableView reloadData];
+    [super loadMoreData];
 }
-*/
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId"];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellId"];
+    }
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%zd ----%@", indexPath.row, self.dataSource[indexPath.row]];
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self.navigationController pushViewController:[[XSMineViewController alloc] init] animated:YES];
+}
 @end

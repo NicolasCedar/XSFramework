@@ -31,19 +31,31 @@
     
     self.title = @"加载中...";
     
+    //  设置kvo
+    [self setupKVO];
+    
+    //  加载请求
+    [self loadRequest];
+}
+
+- (void)configUI {
+    
     self.webView = [[WKWebView alloc] init];
     self.webView.UIDelegate = self;
     self.webView.navigationDelegate = self;
     [self.view addSubview:self.webView];
     
+    [self.webView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.navBar.mas_bottom);
+        make.left.right.bottom.offset(0);
+    }];
+    
     self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, 1)];
     self.progressView.progressTintColor = [UIColor blueColor];
     [self.webView addSubview:self.progressView];
-    
-    //  kvo
-    [self.webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:NULL];
-    [self.webView addObserver:self forKeyPath:@"canGoBack" options:NSKeyValueObservingOptionNew context:NULL];
-    
+}
+
+- (void)loadRequest {
     //  加载网页
     if (self.fileName != nil) {
         NSURL *url = [[NSBundle mainBundle] URLForResource:self.fileName withExtension:@"html"];
@@ -51,15 +63,6 @@
     } else {
         [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.urlString]]];
     }
-}
-
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-    
-    [self.webView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.navBar.mas_bottom);
-        make.left.right.bottom.offset(0);
-    }];
 }
 
 #pragma mark - set
@@ -70,6 +73,11 @@
 }
 
 #pragma mark - kvo
+
+- (void)setupKVO {
+    [self.webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:NULL];
+    [self.webView addObserver:self forKeyPath:@"canGoBack" options:NSKeyValueObservingOptionNew context:NULL];
+}
 
 - (void)observeValueForKeyPath:(NSString *)keyPath
                       ofObject:(id)object

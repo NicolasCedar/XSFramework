@@ -10,6 +10,7 @@ pod 'AFNetworking'
 pod 'Masonry'
 pod 'YYModel'
 pod 'XSAdditions'
+pod 'MJRefresh'
 
   target 'XSFrameworkTests' do
     inherit! :search_paths

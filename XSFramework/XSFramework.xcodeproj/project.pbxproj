@@ -10,6 +10,7 @@
 		8C4F80501FFCD1F000658E26 /* XSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4F804F1FFCD1F000658E26 /* XSViewController.m */; };
 		8C4F80531FFCD2A600658E26 /* XSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4F80521FFCD2A600658E26 /* XSNavigationController.m */; };
 		8C4F805B1FFCDA9E00658E26 /* XSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4F80591FFCDA9E00658E26 /* XSWebViewController.m */; };
+		8C4F80611FFCDEAB00658E26 /* XSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4F80601FFCDEAB00658E26 /* XSTableViewController.m */; };
 		8CB4C12E1FEB9A1B00D71F6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB4C1281FEB9A1B00D71F6B /* main.m */; };
 		8CB4C12F1FEB9A1B00D71F6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CB4C1291FEB9A1B00D71F6B /* Assets.xcassets */; };
 		8CB4C1301FEB9A1B00D71F6B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CB4C12C1FEB9A1B00D71F6B /* Info.plist */; };
@@ -57,6 +58,8 @@
 		8C4F80521FFCD2A600658E26 /* XSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSNavigationController.m; sourceTree = "<group>"; };
 		8C4F80591FFCDA9E00658E26 /* XSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSWebViewController.m; sourceTree = "<group>"; };
 		8C4F805A1FFCDA9E00658E26 /* XSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSWebViewController.h; sourceTree = "<group>"; };
+		8C4F805F1FFCDEAB00658E26 /* XSTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSTableViewController.h; sourceTree = "<group>"; };
+		8C4F80601FFCDEAB00658E26 /* XSTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSTableViewController.m; sourceTree = "<group>"; };
 		8CB4C1281FEB9A1B00D71F6B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = XSFramework/main.m; sourceTree = SOURCE_ROOT; };
 		8CB4C1291FEB9A1B00D71F6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = XSFramework/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		8CB4C12B1FEB9A1B00D71F6B /* XSFramework_PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XSFramework_PrefixHeader.pch; path = XSFramework/XSFramework_PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
@@ -128,12 +131,14 @@
 		8C4F804D1FFCD1E400658E26 /* BaseModule */ = {
 			isa = PBXGroup;
 			children = (
-				8C4F805A1FFCDA9E00658E26 /* XSWebViewController.h */,
-				8C4F80591FFCDA9E00658E26 /* XSWebViewController.m */,
 				8C4F80511FFCD2A600658E26 /* XSNavigationController.h */,
 				8C4F80521FFCD2A600658E26 /* XSNavigationController.m */,
 				8C4F804E1FFCD1F000658E26 /* XSViewController.h */,
 				8C4F804F1FFCD1F000658E26 /* XSViewController.m */,
+				8C4F805F1FFCDEAB00658E26 /* XSTableViewController.h */,
+				8C4F80601FFCDEAB00658E26 /* XSTableViewController.m */,
+				8C4F805A1FFCDA9E00658E26 /* XSWebViewController.h */,
+				8C4F80591FFCDA9E00658E26 /* XSWebViewController.m */,
 			);
 			path = BaseModule;
 			sourceTree = "<group>";
@@ -448,6 +453,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-XSFramework/Pods-XSFramework-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/XSAdditions/XSAdditions.framework",
 				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
@@ -455,6 +461,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XSAdditions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
@@ -582,6 +589,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C4F80611FFCDEAB00658E26 /* XSTableViewController.m in Sources */,
 				8CDB5CA71FD153BA00187FAD /* XSNewFeatureController.m in Sources */,
 				8C4F80531FFCD2A600658E26 /* XSNavigationController.m in Sources */,
 				8CDB5CB01FD158CD00187FAD /* XSNewFeatureCell.m in Sources */,

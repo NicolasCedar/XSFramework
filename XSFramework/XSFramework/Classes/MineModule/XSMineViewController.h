@@ -6,8 +6,8 @@
 //  Copyright © 2017年 huangxuesong. All rights reserved.
 //
 
-#import "XSViewController.h"
+#import "XSTableViewController.h"
 
-@interface XSMineViewController : XSViewController
+@interface XSMineViewController : XSTableViewController
 
 @end

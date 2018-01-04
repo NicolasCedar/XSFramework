@@ -17,20 +17,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    //  配置导航栏
+    [self configNav];
+    
+    //  配置UI
     [self configUI];
 }
 
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-    
-    [self.navBar mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.offset(kStatusBar_Height);
-        make.left.right.offset(0);
-        make.height.equalTo(@44);
-    }];
-}
-
 #pragma mark - pubilc
+
 - (void)dismissToPresent {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -48,13 +45,22 @@
 #pragma mark - config
 
 - (void)configUI {
+    self.contentView = [[UIView alloc] init];
+    [self.view addSubview:self.contentView];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.navBar.mas_bottom);
+        make.left.right.bottom.offset(0);
+    }];
+}
+
+- (void)configNav {
     
     //  navBar
     self.navBar = [[UINavigationBar alloc] init];
-    self.navBar.translucent = NO;
+    [self.navBar setTranslucent:NO];
     [self.navBar setTintColor:[UIColor darkGrayColor]];
+    [self.navBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:19]}];
     
     //  navItem
     self.navItem = [[UINavigationItem alloc] initWithTitle:self.title];
@@ -78,6 +84,12 @@
     
     //  添加到父视图
     [self.view addSubview:self.navBar];
+    
+    [self.navBar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.offset(kStatusBar_Height);
+        make.left.right.offset(0);
+        make.height.equalTo(@44);
+    }];
 }
 
 @end

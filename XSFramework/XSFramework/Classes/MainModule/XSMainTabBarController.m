@@ -18,20 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self addChildViewControllers];
+    self.tabBar.tintColor = [UIColor darkGrayColor];
     
-    [self setupTabBar];
+    [self addChildViewControllers];
 }
 
 #pragma mark - private
-
-- (void)setupTabBar {
-    
-    //  去除顶部黑线
-    self.tabBar.backgroundImage = [UIImage new];
-    self.tabBar.shadowImage = [UIImage new];
-    self.tabBar.translucent = NO;
-}
 
 /**
  添加子控制器
