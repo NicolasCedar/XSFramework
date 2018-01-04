@@ -23,10 +23,11 @@
 
 /* ================================================================= */
 
-#import <Masonry/Masonry.h>
-#import <YYModel/YYModel.h>
-#import <XSAdditions/XSAdditions.h>
-#import <MJRefresh/MJRefresh.h>
+@import Masonry;
+@import XSAdditions;
+@import MJRefresh;
+@import AFNetworking;
+@import YYModel;
 
 #import "XSNetworkingManager.h"
 
