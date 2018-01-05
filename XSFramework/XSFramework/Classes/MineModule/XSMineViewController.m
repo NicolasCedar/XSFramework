@@ -21,6 +21,8 @@
     [self openDownRefresh];
 }
 
+#pragma mark - rewrite
+
 - (void)loadNewData {
     [self.dataSource removeAllObjects];
     
@@ -40,6 +42,8 @@
     [super loadMoreData];
 }
 
+#pragma mark - UITableViewDataSource
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId"];
     
@@ -52,8 +56,17 @@
     return cell;
 }
 
+#pragma mark - UITableViewDelegate
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self.navigationController pushViewController:[[XSMineViewController alloc] init] animated:YES];
+    
+    if (indexPath.row % 2 == 0) {
+        [self.navigationController pushViewController:[[XSMineViewController alloc] init] animated:YES];
+    } else {
+        XSNavigationController *nav = [[XSNavigationController alloc] initWithRootViewController:[XSMineViewController new]];
+        [self presentViewController:nav animated:YES completion:nil];
+    }
 }
+
 @end

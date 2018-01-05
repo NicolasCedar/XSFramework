@@ -17,13 +17,8 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-        NSURL *baseURL = [[NSURL alloc] initWithString:baseURLString];
-        
-        NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
-        config.timeoutIntervalForRequest = 10.0;
-        config.timeoutIntervalForResource = 10.0;
-        
-        instance = [[XSNetworkingManager alloc] initWithBaseURL:baseURL sessionConfiguration:config];
+        instance = [[XSNetworkingManager alloc]
+                    initWithBaseURL:[NSURL URLWithString:baseURLString]];
         
         instance.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json", @"text/javascript", @"text/plain", nil];
     });

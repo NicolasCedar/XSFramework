@@ -29,6 +29,7 @@
 @import AFNetworking;
 @import YYModel;
 
+#import "XSNavigationController.h"
 #import "XSNetworkingManager.h"
 
 /* ================================================================= */

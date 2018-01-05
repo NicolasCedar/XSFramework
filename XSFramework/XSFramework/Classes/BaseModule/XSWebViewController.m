@@ -17,9 +17,7 @@
 /// 加载进度条
 @property (nonatomic, strong) UIProgressView *progressView;
 
-/**
- 刷新控件
- */
+/// 刷新控件
 @property (nonatomic, strong) UIBarButtonItem *refreshItem;
 
 @end
@@ -35,9 +33,6 @@
     [super viewDidLoad];
     
     self.title = @"加载中...";
-    
-    //  设置kvo
-    [self setupKVO];
     
     //  加载请求
     [self loadRequest];
@@ -58,6 +53,10 @@
     self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, 1)];
     self.progressView.progressTintColor = [UIColor blueColor];
     [self.webView addSubview:self.progressView];
+    
+    //  添加监听者对象
+    [self.webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:NULL];
+    [self.webView addObserver:self forKeyPath:@"canGoBack" options:NSKeyValueObservingOptionNew context:NULL];
 }
 
 - (void)loadRequest {
@@ -87,12 +86,25 @@
     _urlString = [urlString stringByReplacingOccurrencesOfString:@" " withString:@""];
 }
 
-#pragma mark - kvo
+#pragma mark - rewrite
 
-- (void)setupKVO {
-    [self.webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:NULL];
-    [self.webView addObserver:self forKeyPath:@"canGoBack" options:NSKeyValueObservingOptionNew context:NULL];
+- (void)goBack {
+    if (self.webView.canGoBack) {
+        [self.webView goBack];
+    } else {
+        [self dismissToPresent];
+    }
 }
+
+- (void)dismissToPresent {
+    if (self.presentingViewController != nil) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } else {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
+#pragma mark - kvo
 
 - (void)observeValueForKeyPath:(NSString *)keyPath
                       ofObject:(id)object
@@ -107,35 +119,12 @@
     
     //  监听回退
     if ([keyPath isEqualToString:@"canGoBack"]) {
-        BOOL new = [change[NSKeyValueChangeNewKey] boolValue];
-        BOOL old = [change[NSKeyValueChangeOldKey] boolValue];
         
-        if (new && !old) {
-            UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_back"] style:UIBarButtonItemStylePlain target:self action:@selector(backToPresent)];
-            
-            UIBarButtonItem *closeItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStylePlain target:self action:@selector(closeToPresent)];
-            self.navItem.leftBarButtonItems = @[backItem, closeItem];
-        }
+        self.navItem.leftBarButtonItems = [change[NSKeyValueChangeNewKey] boolValue] ? @[self.backItem, self.closeItem] : @[self.backItem];
     }
 }
 
 #pragma mark - monitor
-
-- (void)backToPresent {
-    if (self.webView.canGoBack) {
-        [self.webView goBack];
-    } else {
-        [self closeToPresent];
-    }
-}
-
-- (void)closeToPresent {
-    if (self.presentingViewController != nil) {
-        [self dismissViewControllerAnimated:YES completion:nil];
-    } else {
-        [self.navigationController popViewControllerAnimated:YES];
-    }
-}
 
 - (void)refreshView {
     [self.webView reload];

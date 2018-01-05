@@ -19,6 +19,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self configNoDataUI];
+}
+
+#pragma mark - config
+
+- (void)configUI {
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+    [self.view addSubview:self.tableView];
+    
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.navBar.mas_bottom);
+        make.left.right.bottom.offset(0);
+    }];
+    
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+}
+
+- (void)configNoDataUI {
+    self.nodataImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"noData"]];
+    [self.tableView addSubview:self.nodataImageView];
+    
+    [self.nodataImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.offset(0);
+    }];
 }
 
 #pragma mark - public
@@ -51,33 +77,6 @@
     }
     
     return _dataSource;
-}
-
-#pragma mark - config
-
-- (void)configUI {
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
-    [self.view addSubview:self.tableView];
-    
-    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.navBar.mas_bottom);
-        make.left.right.bottom.offset(0);
-    }];
-    
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
-    [self configNoDataUI];
-}
-
-- (void)configNoDataUI {
-    self.nodataImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"noData"]];
-    [self.tableView addSubview:self.nodataImageView];
-    
-    [self.nodataImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.offset(0);
-    }];
 }
 
 #pragma mark - UITableViewDataSource

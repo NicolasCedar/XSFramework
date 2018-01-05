@@ -8,7 +8,6 @@
 
 #import "XSHomeViewController.h"
 #import "XSWebViewController.h"
-
 #import "XSNinthPalaceView.h"
 #import "XSBannerView.h"
 
@@ -18,13 +17,23 @@
 
 @implementation XSHomeViewController
 
-- (void)configUI {
-    [super configUI];
+- (void)viewDidLoad {
+    [super viewDidLoad];
     
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoDark];
-    [self.contentView addSubview:btn];
-    btn.frame = CGRectMake(0, 100, 100, 100);
-    [btn addTarget:self  action:@selector(clickBtn) forControlEvents:UIControlEventTouchUpInside];
+    [self setupUI];
+}
+
+- (void)setupUI {
+    
+    UIButton *pushBtn = [UIButton xs_textButton:@"push" fontSize:20 normalColor:[UIColor redColor] highlightedColor:nil];
+    [self.contentView addSubview:pushBtn];
+    pushBtn.frame = CGRectMake(0, 20, 100, 100);
+    [pushBtn addTarget:self  action:@selector(push) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *modalBtn = [UIButton xs_textButton:@"modal" fontSize:20 normalColor:[UIColor orangeColor] highlightedColor:nil];
+    [self.contentView addSubview:modalBtn];
+    modalBtn.frame = CGRectMake(200, 20, 100, 100);
+    [modalBtn addTarget:self  action:@selector(modal) forControlEvents:UIControlEventTouchUpInside];
     
      XSNinthPalaceView *view = [XSNinthPalaceView viewWithFrame:
                                CGRectMake(0, 200, self.view.bounds.size.width, 100)
@@ -57,22 +66,18 @@
 }
 
 - (void)click {
-    NSLog(@"点击");
-    
     XSWebViewController *vc = [[XSWebViewController alloc] init];
-    
     vc.urlString = @"https://www. baidu .com ";
-    
     [self.navigationController pushViewController:vc animated:YES];
-    
 }
 
-- (void)dealloc {
-    NSLog(@"dealloc");
-}
-
-- (void)clickBtn {
+- (void)push {
     [self.navigationController pushViewController:[XSHomeViewController new] animated:YES];
+}
+
+- (void)modal {
+    XSNavigationController *nav = [[XSNavigationController alloc] initWithRootViewController:[XSHomeViewController new]];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 @end

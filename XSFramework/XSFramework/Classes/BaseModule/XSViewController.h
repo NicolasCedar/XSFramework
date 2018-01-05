@@ -13,31 +13,31 @@
 /**
  内容视图
  */
-@property (nonatomic, strong) UIView *contentView;
+@property (nonatomic, strong, readonly) UIView *contentView;
 
 /**
  自定义导航条
  */
-@property (nonatomic, strong) UINavigationBar *navBar;
+@property (nonatomic, strong, readonly) UINavigationBar *navBar;
 
 /**
  自定义的导航条目 - 以后设置导航栏内容，统一使用 navItem
  */
-@property (nonatomic, strong) UINavigationItem *navItem;
+@property (nonatomic, strong, readonly) UINavigationItem *navItem;
 
-/**
- 配置UI
- */
+/// 返回控件
+@property (nonatomic, strong, readonly) UIBarButtonItem *backItem;
+
+/// 关闭控件
+@property (nonatomic, strong, readonly) UIBarButtonItem *closeItem;
+
+/// 配置界面
 - (void)configUI;
 
-/**
- 移除控制器
- */
+/// 移除
 - (void)dismissToPresent;
 
-/**
- 返回上一级控制器
- */
-- (void)popToPresent;
+/// 返回
+- (void)goBack;
 
 @end

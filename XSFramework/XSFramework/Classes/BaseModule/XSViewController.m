@@ -32,11 +32,12 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)popToPresent {
+- (void)goBack {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - rewrite
+
 - (void)setTitle:(NSString *)title {
     super.title = title;
     self.navItem.title = title;
@@ -45,7 +46,7 @@
 #pragma mark - config
 
 - (void)configUI {
-    self.contentView = [[UIView alloc] init];
+    _contentView = [[UIView alloc] init];
     [self.view addSubview:self.contentView];
     
     [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -57,35 +58,35 @@
 - (void)configNav {
     
     //  navBar
-    self.navBar = [[UINavigationBar alloc] init];
-    [self.navBar setTranslucent:NO];
-    [self.navBar setTintColor:[UIColor darkGrayColor]];
-    [self.navBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:19]}];
+    _navBar = [[UINavigationBar alloc] init];
+    [_navBar setTranslucent:NO];
+    [_navBar setTintColor:[UIColor darkGrayColor]];
+    [_navBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:19]}];
     
     //  navItem
-    self.navItem = [[UINavigationItem alloc] initWithTitle:self.title];
-    self.navBar.items = @[self.navItem];
+    _navItem = [[UINavigationItem alloc] initWithTitle:self.title];
+    _navBar.items = @[_navItem];
     
-    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_back"] style:UIBarButtonItemStylePlain target:self action:@selector(popToPresent)];
+    //  返回按钮
+    _backItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_back"] style:UIBarButtonItemStylePlain target:self action:@selector(goBack)];
     
-    UIBarButtonItem *closeItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStylePlain target:self action:@selector(dismissToPresent)];
+    //  关闭按钮
+    _closeItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStylePlain target:self action:@selector(dismissToPresent)];
     
-    if (self.presentingViewController != nil) {
+    if (self.presentingViewController != nil) { //  modal
+        _navItem.leftBarButtonItem = _closeItem;
+        
         if (self.navigationController.childViewControllers.count > 1) {
-            self.navItem.leftBarButtonItems = @[backItem, closeItem];
-        } else {
-            self.navItem.leftBarButtonItem = closeItem;
+            _navItem.leftBarButtonItems =  @[_backItem, _closeItem];
         }
-    } else {
-        if (self.navigationController.childViewControllers.count > 1) {
-            self.navItem.leftBarButtonItem = backItem;
-        }
+    } else { // push
+        _navItem.leftBarButtonItem = self.navigationController.childViewControllers.count > 1 ? _backItem : nil;
     }
     
     //  添加到父视图
-    [self.view addSubview:self.navBar];
+    [self.view addSubview:_navBar];
     
-    [self.navBar mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_navBar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.offset(kStatusBar_Height);
         make.left.right.offset(0);
         make.height.equalTo(@44);
