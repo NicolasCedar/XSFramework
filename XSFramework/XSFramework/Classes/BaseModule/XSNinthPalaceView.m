@@ -11,6 +11,7 @@
 @implementation XSNinthPalaceView
 
 + (instancetype)viewWithFrame:(CGRect)frame dataSource:(NSArray <NSDictionary *>*)dataSource colConst:(int)colConst {
+    
     XSNinthPalaceView *view = [[XSNinthPalaceView alloc] initWithFrame:frame];
     view.backgroundColor = [UIColor whiteColor];
     
@@ -26,6 +27,7 @@
         NSString *title = [obj objectForKey:@"title"];
         NSString *imgName = [obj objectForKey:@"imageName"];
         NSString *action = [obj objectForKey:@"action"];
+        
         if (title.length > 0) {
             [btn setTitle:title forState:UIControlStateNormal];
             [btn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];

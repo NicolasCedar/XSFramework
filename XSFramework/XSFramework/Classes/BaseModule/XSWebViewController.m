@@ -38,26 +38,7 @@
     [self loadRequest];
 }
 
-- (void)configUI {
-    
-    self.webView = [[WKWebView alloc] init];
-    self.webView.UIDelegate = self;
-    self.webView.navigationDelegate = self;
-    [self.view addSubview:self.webView];
-    
-    [self.webView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.navBar.mas_bottom);
-        make.left.right.bottom.offset(0);
-    }];
-    
-    self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, 1)];
-    self.progressView.progressTintColor = [UIColor blueColor];
-    [self.webView addSubview:self.progressView];
-    
-    //  添加监听者对象
-    [self.webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:NULL];
-    [self.webView addObserver:self forKeyPath:@"canGoBack" options:NSKeyValueObservingOptionNew context:NULL];
-}
+#pragma mark - private
 
 - (void)loadRequest {
     //  加载网页
@@ -89,6 +70,7 @@
 #pragma mark - rewrite
 
 - (void)goBack {
+    
     if (self.webView.canGoBack) {
         [self.webView goBack];
     } else {
@@ -97,6 +79,7 @@
 }
 
 - (void)dismissToPresent {
+    
     if (self.presentingViewController != nil) {
         [self dismissViewControllerAnimated:YES completion:nil];
     } else {
@@ -104,13 +87,33 @@
     }
 }
 
+- (void)configUI {
+    
+    self.webView = [[WKWebView alloc] init];
+    self.webView.UIDelegate = self;
+    self.webView.navigationDelegate = self;
+    [self.view addSubview:self.webView];
+    
+    [self.webView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.navBar.mas_bottom);
+        make.left.right.bottom.offset(0);
+    }];
+    
+    self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, 1)];
+    self.progressView.progressTintColor = [UIColor blueColor];
+    [self.webView addSubview:self.progressView];
+    
+    //  添加监听者对象
+    [self.webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:NULL];
+    [self.webView addObserver:self forKeyPath:@"canGoBack" options:NSKeyValueObservingOptionNew context:NULL];
+}
+
 #pragma mark - kvo
 
-- (void)observeValueForKeyPath:(NSString *)keyPath
-                      ofObject:(id)object
-                        change:(NSDictionary<NSKeyValueChangeKey,id> *)change
-                       context:(void *)context {
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    //  进度条
     if ([keyPath isEqualToString:@"estimatedProgress"]) {
+        
         CGFloat progress = [change[NSKeyValueChangeNewKey] floatValue];
         
         self.progressView.progress = progress;
