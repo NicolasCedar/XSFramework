@@ -6,16 +6,16 @@
 //  Copyright © 2017年 huangxuesong. All rights reserved.
 //
 
-#import "XSHomeViewController.h"
+#import "XSHomePageController.h"
 #import "XSWebViewController.h"
 #import "XSNinthPalaceView.h"
 #import "XSBannerView.h"
 
-@interface XSHomeViewController ()
+@interface XSHomePageController ()
 
 @end
 
-@implementation XSHomeViewController
+@implementation XSHomePageController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -72,11 +72,11 @@
 }
 
 - (void)push {
-    [self.navigationController pushViewController:[XSHomeViewController new] animated:YES];
+    [self.navigationController pushViewController:[XSHomePageController new] animated:YES];
 }
 
 - (void)modal {
-    XSNavigationController *nav = [[XSNavigationController alloc] initWithRootViewController:[XSHomeViewController new]];
+    XSNavigationController *nav = [[XSNavigationController alloc] initWithRootViewController:[XSHomePageController new]];
     [self presentViewController:nav animated:YES completion:nil];
 }
 

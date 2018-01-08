@@ -9,7 +9,7 @@
 #import "XSNewFeatureController.h"
 #import "XSNewFeatureLayout.h"
 #import "XSNewFeatureCell.h"
-#import "XSMainTabBarController.h"
+#import "XSMainController.h"
 
 #define kNewFeatureMaxCount 2
 
@@ -90,7 +90,7 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark - private
 
 - (void)exitButtonClick {
-    [UIApplication sharedApplication].keyWindow.rootViewController = [[XSMainTabBarController alloc] init];
+    [UIApplication sharedApplication].keyWindow.rootViewController = [[XSMainController alloc] init];
 }
 
 #pragma mark - UIScrollViewDelegate

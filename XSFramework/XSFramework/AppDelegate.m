@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "XSNewFeatureController.h"
-#import "XSMainTabBarController.h"
+#import "XSMainController.h"
 
 #define appId @"888174458"
 #define appQueryUrl @"https://itunes.apple.com/lookup?id=888174458"
@@ -71,7 +71,7 @@
     // 3.比较两个版本号是否相同
     if ([version isEqualToString:currentVersion]) {
         
-        XSMainTabBarController *mainVc = [[XSMainTabBarController alloc] init];
+        XSMainController *mainVc = [[XSMainController alloc] init];
         self.window.rootViewController = mainVc;
         
         [self checkAppUpdate];

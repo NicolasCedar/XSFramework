@@ -2,11 +2,11 @@
   {
     "imageName" : "home",
     "title" : "首页",
-    "className" : "XSHomeViewController"
+    "className" : "XSHomePageController"
   },
   {
     "imageName" : "mine",
     "title" : "我的帐户",
-    "className" : "XSMineViewController"
+    "className" : "XSProfileController"
   }
 ]

@@ -1,19 +1,19 @@
 //
-//  XSMainTabBarController.m
+//  XSMainController.m
 //  XSFramework
 //
 //  Created by huangxuesong on 2017/12/1.
 //  Copyright © 2017年 huangxuesong. All rights reserved.
 //
 
-#import "XSMainTabBarController.h"
+#import "XSMainController.h"
 #import "XSNavigationController.h"
 
-@interface XSMainTabBarController ()
+@interface XSMainController ()
 
 @end
 
-@implementation XSMainTabBarController
+@implementation XSMainController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

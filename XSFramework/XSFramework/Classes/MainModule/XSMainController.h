@@ -1,5 +1,5 @@
 //
-//  XSMainTabBarController.h
+//  XSMainController.h
 //  XSFramework
 //
 //  Created by huangxuesong on 2017/12/1.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XSMainTabBarController : UITabBarController
+@interface XSMainController : UITabBarController
 
 @end

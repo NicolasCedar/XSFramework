@@ -1,18 +1,18 @@
 //
-//  XSMineViewController.m
+//  XSProfileController.m
 //  XSFramework
 //
 //  Created by huangxuesong on 2017/12/4.
 //  Copyright © 2017年 huangxuesong. All rights reserved.
 //
 
-#import "XSMineViewController.h"
+#import "XSProfileController.h"
 
-@interface XSMineViewController ()
+@interface XSProfileController ()
 
 @end
 
-@implementation XSMineViewController
+@implementation XSProfileController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -62,9 +62,9 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.row % 2 == 0) {
-        [self.navigationController pushViewController:[[XSMineViewController alloc] init] animated:YES];
+        [self.navigationController pushViewController:[[XSProfileController alloc] init] animated:YES];
     } else {
-        XSNavigationController *nav = [[XSNavigationController alloc] initWithRootViewController:[XSMineViewController new]];
+        XSNavigationController *nav = [[XSNavigationController alloc] initWithRootViewController:[XSProfileController new]];
         [self presentViewController:nav animated:YES completion:nil];
     }
 }
