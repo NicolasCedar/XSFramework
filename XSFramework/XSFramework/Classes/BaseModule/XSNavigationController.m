@@ -24,9 +24,8 @@
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     
-    if (self.viewControllers.count > 0) {// 隐藏标签栏
-        viewController.hidesBottomBarWhenPushed = YES;
-    }
+    // 隐藏标签栏
+    viewController.hidesBottomBarWhenPushed = self.viewControllers.count > 0;
     
     [super pushViewController:viewController animated:animated];
 }
