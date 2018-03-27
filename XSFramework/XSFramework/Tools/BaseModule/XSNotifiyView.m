@@ -74,7 +74,15 @@
         return ;
     }
     
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(startLoopScroll) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:self.timeInterval target:self selector:@selector(startLoopScroll) userInfo:nil repeats:YES];
+}
+
+- (void)pauseTimer {
+    self.timer.fireDate = [NSDate distantFuture];
+}
+
+- (void)resumeTimer:(NSTimeInterval)timeInterval {
+    self.timer.fireDate = [NSDate dateWithTimeIntervalSinceNow:timeInterval];
 }
 
 - (void)stopTimer {
@@ -83,6 +91,13 @@
 }
 
 #pragma mark - UIScrollViewDelegate
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [self pauseTimer];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    [self resumeTimer:self.timeInterval];
+}
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     if (self.infos.count == 0) {
