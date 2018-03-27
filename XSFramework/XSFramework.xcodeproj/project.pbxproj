@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C88557B2069DB5E0017F4F0 /* XSNotifiyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C88557A2069DB5E0017F4F0 /* XSNotifiyView.m */; };
 		8CB4C12E1FEB9A1B00D71F6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB4C1281FEB9A1B00D71F6B /* main.m */; };
 		8CB4C12F1FEB9A1B00D71F6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CB4C1291FEB9A1B00D71F6B /* Assets.xcassets */; };
 		8CB4C1301FEB9A1B00D71F6B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CB4C12C1FEB9A1B00D71F6B /* Info.plist */; };
@@ -55,6 +56,8 @@
 		0E0D1FEC4DB9619C3F8DCF28 /* Pods-XSFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XSFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-XSFramework/Pods-XSFramework.release.xcconfig"; sourceTree = "<group>"; };
 		2F189B082FF9FED5A73D4E4B /* Pods-XSFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XSFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XSFramework/Pods-XSFramework.debug.xcconfig"; sourceTree = "<group>"; };
 		4FE5A460EF7184CAAF8CB5A0 /* Pods_XSFrameworkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XSFrameworkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C8855792069DB5E0017F4F0 /* XSNotifiyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSNotifiyView.h; sourceTree = "<group>"; };
+		8C88557A2069DB5E0017F4F0 /* XSNotifiyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSNotifiyView.m; sourceTree = "<group>"; };
 		8CB4C1281FEB9A1B00D71F6B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = XSFramework/main.m; sourceTree = SOURCE_ROOT; };
 		8CB4C1291FEB9A1B00D71F6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = XSFramework/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		8CB4C12B1FEB9A1B00D71F6B /* XSFramework_PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XSFramework_PrefixHeader.pch; path = XSFramework/XSFramework_PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
@@ -252,6 +255,8 @@
 				8CEAE3052003591500B7C9CD /* XSViewController.m */,
 				8CEAE3062003591500B7C9CD /* XSWebViewController.h */,
 				8CEAE3072003591500B7C9CD /* XSWebViewController.m */,
+				8C8855792069DB5E0017F4F0 /* XSNotifiyView.h */,
+				8C88557A2069DB5E0017F4F0 /* XSNotifiyView.m */,
 			);
 			path = BaseModule;
 			sourceTree = "<group>";
@@ -486,6 +491,7 @@
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/XSAdditions/XSAdditions.framework",
 				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 			);
@@ -494,6 +500,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XSAdditions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 			);
@@ -636,6 +643,7 @@
 				8CDB5CAA1FD153F100187FAD /* XSNewFeatureLayout.m in Sources */,
 				8CEAE30C2003591500B7C9CD /* XSNavigationController.m in Sources */,
 				8CB4C12E1FEB9A1B00D71F6B /* main.m in Sources */,
+				8C88557B2069DB5E0017F4F0 /* XSNotifiyView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
