@@ -26,11 +26,10 @@
 @import Masonry;
 @import XSAdditions;
 @import MJRefresh;
-@import AFNetworking;
 @import YYModel;
+@import SDWebImage;
 
 #import "XSNavigationController.h"
-#import "XSNetworkingManager.h"
 
 /* ================================================================= */
 

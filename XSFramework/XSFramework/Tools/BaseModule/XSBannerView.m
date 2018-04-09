@@ -72,9 +72,10 @@
     NSString *leftUrl = self.infos[leftIndex][@"picUrl"];
     NSString *centerUrl = self.infos[currentInex][@"picUrl"];
     NSString *rightUrl = self.infos[rightIndex][@"picUrl"];
-    [self.leftImageView setImageWithURL:[NSURL URLWithString:leftUrl]];
-    [self.centerImageView setImageWithURL:[NSURL URLWithString:centerUrl]];
-    [self.rightImageView setImageWithURL:[NSURL URLWithString:rightUrl]];
+    
+    [self.leftImageView sd_setImageWithURL:[NSURL URLWithString:leftUrl]];
+    [self.centerImageView sd_setImageWithURL:[NSURL URLWithString:centerUrl]];
+    [self.rightImageView sd_setImageWithURL:[NSURL URLWithString:rightUrl]];
 }
 
 #pragma mark - private
