@@ -25,12 +25,14 @@
 
 - (void)setupUI {
     
-    UIButton *pushBtn = [UIButton xs_textButton:@"push" fontSize:20 normalColor:[UIColor redColor] highlightedColor:nil];
+    UIButton *pushBtn = [UIButton xs_button:@"push" color:[UIColor redColor]];
+    pushBtn.titleLabel.font = [UIFont systemFontOfSize:20];
     [self.contentView addSubview:pushBtn];
     pushBtn.frame = CGRectMake(0, 20, 100, 100);
     [pushBtn addTarget:self  action:@selector(push) forControlEvents:UIControlEventTouchUpInside];
     
-    UIButton *modalBtn = [UIButton xs_textButton:@"modal" fontSize:20 normalColor:[UIColor orangeColor] highlightedColor:nil];
+    UIButton *modalBtn = [UIButton xs_button:@"push" color:[UIColor orangeColor]];
+    modalBtn.titleLabel.font = [UIFont systemFontOfSize:20];
     [self.contentView addSubview:modalBtn];
     modalBtn.frame = CGRectMake(200, 20, 100, 100);
     [modalBtn addTarget:self  action:@selector(modal) forControlEvents:UIControlEventTouchUpInside];
